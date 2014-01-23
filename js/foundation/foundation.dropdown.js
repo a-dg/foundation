@@ -4,7 +4,7 @@
   Foundation.libs.dropdown = {
     name : 'dropdown',
 
-    version : '5.0.0',
+    version : '5.0.3',
 
     settings : {
       active_class: 'open',
@@ -27,8 +27,6 @@
         .on('click.fndtn.dropdown', '[data-dropdown]', function (e) {
           var settings = $(this).data('dropdown-init') || self.settings;
           e.preventDefault();
-
-          self.closeall.call(self);
 
           if (!settings.is_hover || Modernizr.touch) self.toggle($(this));
         })
